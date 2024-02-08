@@ -1,3 +1,6 @@
+# Concepts addressed: shell, prompt
+# Retrospective: What went well - We worked well together and got the assingment done on time during class.
+What could have gone better - One of the commands listed in the reading didn't work. The "free" command which was supposed to show how much memory was open did not function. We could have found a solution to this issue had we sought help either from the instrucotr or by having a tool such as ChatGPT installed.
 Last login: Thu Feb  1 15:00:01 on console
 
 D134619956:~ garci232$ [me@linuxbox -]$
