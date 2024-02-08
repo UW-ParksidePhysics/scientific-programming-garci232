@@ -1,0 +1,209 @@
+Last login: Thu Feb  1 15:00:01 on console
+
+D134619956:~ garci232$ [me@linuxbox -]$
+
+-bash: [me@linuxbox: command not found
+
+D134619956:~ garci232$ kacjao;fjwqohvihvaoihv
+
+-bash: kacjao: command not found
+
+-bash: fjwqohvihvaoihv: command not found
+
+D134619956:~ garci232$ date
+
+Thu Feb  1 15:12:38 CST 2024
+
+D134619956:~ garci232$ cal
+
+   February 2024      
+
+Su Mo Tu We Th Fr Sa  
+
+             1  2  3  
+
+ 4  5  6  7  8  9 10  
+
+11 12 13 14 15 16 17  
+
+18 19 20 21 22 23 24  
+
+25 26 27 28 29        
+
+                      
+
+D134619956:~ garci232$ df
+
+Filesystem    512-blocks      Used Available Capacity iused               ifree %iused  Mounted on
+
+/dev/disk1s1   236363688 110532560 120310600    48% 1001036 9223372036853774771    0%   /
+
+devfs                371       371         0   100%     644                   0  100%   /dev
+
+/dev/disk1s4   236363688   4194344 120310600     4%       1 9223372036854775806    0%   /private/var/vm
+
+map -hosts             0         0         0   100%       0                   0  100%   /net
+
+map auto_home          0         0         0   100%       0                   0  100%   /home
+
+map -fstab             0         0         0   100%       0                   0  100%   /Network/Servers
+
+/dev/disk0s1      612944     32264    580680     6%       0                   0  100%   /Volumes/firmwaresyncd.Jfds3i
+
+/dev/disk1s2   236363688     82416 120310600     1%     112 9223372036854775695    0%   /Volumes/Preboot
+
+D134619956:~ garci232$ free
+
+-bash: free: command not found
+
+D134619956:~ garci232$ free
+
+-bash: free: command not found
+
+D134619956:~ garci232$ df
+
+Filesystem    512-blocks      Used Available Capacity iused               ifree %iused  Mounted on
+
+/dev/disk1s1   236363688 110536840 120306320    48% 1001036 9223372036853774771    0%   /
+
+devfs                371       371         0   100%     644                   0  100%   /dev
+
+/dev/disk1s4   236363688   4194344 120306320     4%       1 9223372036854775806    0%   /private/var/vm
+
+map -hosts             0         0         0   100%       0                   0  100%   /net
+
+map auto_home          0         0         0   100%       0                   0  100%   /home
+
+map -fstab             0         0         0   100%       0                   0  100%   /Network/Servers
+
+/dev/disk0s1      612944     32264    580680     6%       0                   0  100%   /Volumes/firmwaresyncd.Jfds3i
+
+/dev/disk1s2   236363688     82416 120306320     1%     112 9223372036854775695    0%   /Volumes/Preboot
+
+D134619956:~ garci232$ free
+
+-bash: free: command not found
+
+D134619956:~ garci232$ mf
+
+-bash: mf: command not found
+
+D134619956:~ garci232$ df
+
+Filesystem    512-blocks      Used Available Capacity iused               ifree %iused  Mounted on
+
+/dev/disk1s1   236363688 110536840 120306320    48% 1001036 9223372036853774771    0%   /
+
+devfs                371       371         0   100%     644                   0  100%   /dev
+
+/dev/disk1s4   236363688   4194344 120306320     4%       1 9223372036854775806    0%   /private/var/vm
+
+map -hosts             0         0         0   100%       0                   0  100%   /net
+
+map auto_home          0         0         0   100%       0                   0  100%   /home
+
+map -fstab             0         0         0   100%       0                   0  100%   /Network/Servers
+
+/dev/disk0s1      612944     32264    580680     6%       0                   0  100%   /Volumes/firmwaresyncd.Jfds3i
+
+/dev/disk1s2   236363688     82416 120306320     1%     112 9223372036854775695    0%   /Volumes/Preboot
+
+D134619956:~ garci232$ dm
+
+-bash: dm: command not found
+
+D134619956:~ garci232$ FREE
+
+-bash: FREE: command not found
+
+D134619956:~ garci232$ df
+
+Filesystem    512-blocks      Used Available Capacity iused               ifree %iused  Mounted on
+
+/dev/disk1s1   236363688 110537000 120306160    48% 1001036 9223372036853774771    0%   /
+
+devfs                371       371         0   100%     644                   0  100%   /dev
+
+/dev/disk1s4   236363688   4194344 120306160     4%       1 9223372036854775806    0%   /private/var/vm
+
+map -hosts             0         0         0   100%       0                   0  100%   /net
+
+map auto_home          0         0         0   100%       0                   0  100%   /home
+
+map -fstab             0         0         0   100%       0                   0  100%   /Network/Servers
+
+/dev/disk0s1      612944     32264    580680     6%       0                   0  100%   /Volumes/firmwaresyncd.Jfds3i
+
+/dev/disk1s2   236363688     82416 120306160     1%     112 9223372036854775695    0%   /Volumes/Preboot
+
+D134619956:~ garci232$ dm
+
+-bash: dm: command not found
+
+D134619956:~ garci232$ fm
+
+-bash: fm: command not found
+
+D134619956:~ garci232$ mf
+
+-bash: mf: command not found
+
+D134619956:~ garci232$ FREE
+
+-bash: FREE: command not found
+
+D134619956:~ garci232$ dfree
+
+-bash: dfree: command not found
+
+D134619956:~ garci232$ rickroll
+
+-bash: rickroll: command not found
+
+D134619956:~ garci232$ hi
+
+-bash: hi: command not found
+
+D134619956:~ garci232$ qwerty
+
+-bash: qwerty: command not found
+
+D134619956:~ garci232$ cal
+
+   February 2024      
+
+Su Mo Tu We Th Fr Sa  
+
+             1  2  3  
+
+ 4  5  6  7  8  9 10  
+
+11 12 13 14 15 16 17  
+
+18 19 20 21 22 23 24  
+
+25 26 27 28 29        
+
+                      
+
+D134619956:~ garci232$ date
+
+Thu Feb  1 15:15:56 CST 2024
+
+D134619956:~ garci232$ 
+
+D134619956:~ garci232$                       
+
+D134619956:~ garci232$ D134619956:~ garci232$ date
+
+-bash: D134619956:~: command not found
+
+D134619956:~ garci232$ Thu Feb  1 15:15:56 CST 2024
+
+-bash: Thu: command not found
+
+D134619956:~ garci232$ D134619956:~ garci232$ 
+
+-bash: D134619956:~: command not found
+
+D134619956:~ garci232$ 
