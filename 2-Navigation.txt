@@ -1,4 +1,4 @@
-# Concepts addressed: 
+# Concepts addressed: Directory, List, Built-in function.
 # Mini-retro:
 Changing directory went well.
 Because I was using the windows command prompt and not linux, some of the commands listed in Chapter 2 didn't work. Having the coding for windows as well would be nice.
