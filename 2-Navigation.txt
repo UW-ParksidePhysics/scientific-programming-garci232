@@ -1,4 +1,7 @@
-
+# Concepts addressed: 
+# Mini-retro:
+Changing directory went well.
+Because I was using the windows command prompt and not linux, some of the commands listed in Chapter 2 didn't work. Having the coding for windows as well would be nice.
 Microsoft Windows [Version 10.0.19042.685]
 (c) 2020 Microsoft Corporation. All rights reserved.
 
