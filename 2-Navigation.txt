@@ -1,0 +1,31 @@
+
+Microsoft Windows [Version 10.0.19042.685]
+(c) 2020 Microsoft Corporation. All rights reserved.
+
+C:\WINDOWS\System32>cd
+C:\WINDOWS\System32
+
+C:\WINDOWS\System32>cd /usr/bin
+The system cannot find the path specified.
+
+C:\WINDOWS\System32>cd /usr
+The system cannot find the path specified.
+
+C:\WINDOWS\System32>cd ..
+
+C:\Windows>cd
+C:\Windows
+
+C:\Windows>cd ./bin
+The system cannot find the path specified.
+
+C:\Windows>cd bin
+The system cannot find the path specified.
+
+C:\Windows>cd -
+The system cannot find the path specified.
+
+C:\Windows>cd
+C:\Windows
+
+C:\Windows>
