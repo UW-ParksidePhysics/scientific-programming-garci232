@@ -9,3 +9,4 @@ if __name__ == "__main__":
   celsius = convert_fahrenheit_to_celsius(fahrenheit)
   print(f"Temperature in Fahrenheit: {fahrenheit}°F")
   print(f"Temperature in Celsius: {celsius}°C")
+
