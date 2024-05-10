@@ -1,5 +1,5 @@
 import numpy as np
-__author__ = "Your Name"
+__author__ = "Nicolas Garcia"
 def fit_curve_array(quadratic_coefficients, minimum_x, maximum_x, number_of_points=100):
     if maximum_x < minimum_x:
         raise ArithmeticError("Maximum x should be greater than minimum x")

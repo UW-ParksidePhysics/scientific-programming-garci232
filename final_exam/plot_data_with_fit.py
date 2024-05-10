@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
-__author__ = "Your Name"
+__author__ = "Nicolas Garcia"
 def plot_data_with_fit(data, fit_curve, data_format='o', fit_format='-'):
     plt.figure()
     data_plot = plt.plot(data[0], data[1], data_format, label='Data Points')

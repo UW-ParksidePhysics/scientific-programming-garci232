@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
-__author__ = "Your Name"
+__author__ = "Nicolas Garcia"
 def annotate_plot(ax, annotations):
     for label, annotation_props in annotations.items():
         ax.text(annotation_props['x'], annotation_props['y'], label,

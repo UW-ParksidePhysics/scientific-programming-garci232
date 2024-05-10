@@ -1,5 +1,5 @@
 import numpy as np
-__author__ = "Your Name"
+__author__ = "Nicolas Garcia"
 def calculate_lowest_eigenvectors(square_matrix, number_of_eigenvectors=3):
     if square_matrix.shape[0] != square_matrix.shape[1]:
         raise ValueError("Input matrix must be square")

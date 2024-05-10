@@ -1,4 +1,5 @@
 import numpy as np
+__author__ = "Nicolas Garcia"
 def read_two_columns_text(filename):
     try:
         data = np.loadtxt(filename).T
