@@ -1,7 +1,7 @@
+import os
 import numpy as np
 import matplotlib.pyplot as plt
 import datetime
-import os
 from final_exam import convert_units
 from final_exam import read_two_columns_text
 from final_exam import calculate_bivariate_statistics
@@ -10,88 +10,62 @@ from final_exam import fit_eos
 from final_exam import annotate_plot
 from final_exam import generate_matrix
 from final_exam import calculate_lowest_eigenvectors
-
 def parse_file_name(filename):
     """
-    Extract metadata from the formatted filename.
-
-    Args:
-        filename (str): The file path to parse.
-
+    Extracts metadata from the filename.
+    Parameters:
+    filename (str): The filename containing metadata.
     Returns:
-        tuple: Containing three strings (chemical_symbol, crystal_symmetry_symbol,
-               density_functional_acronym).
+    tuple: (chemical_symbol, crystal_symmetry_symbol, density_functional_acronym)
     """
-    file_name = os.path.basename(filename)
-    parts = file_name.split('.')
-    if len(parts) < 4:
-        raise ValueError("Filename does not contain enough parts to extract the necessary information.")
-
+    parts = filename.split('.')
     return parts[0], parts[1], parts[2]
-
-def plot_data_and_fit(data, fit_curve, title, xlabel, ylabel, save_fig=False):
+def plot_data_and_fit(data, fit_curve, parameters, chemical_symbol, crystal_symmetry_symbol, display=True):
     """
-    Plots data points and fit curve, annotates the plot, and displays or saves the figure.
-
-    Args:
-        data (numpy array): Numpy array containing data points.
-        fit_curve (numpy array): Numpy array containing the fit curve.
-        title (str): Title of the plot.
-        xlabel (str): Label for the x-axis.
-        ylabel (str): Label for the y-axis.
-        save_fig (bool): If True, save the figure; otherwise, display it.
+    Plots data points, fit curve, and annotates the plot.
+    Parameters:
+    data (numpy.ndarray): Array of data points.
+    fit_curve (numpy.ndarray): Array of fit curve points.
+    parameters (dict): Dictionary of parameters.
+    chemical_symbol (str): Chemical symbol.
+    crystal_symmetry_symbol (str): Crystal symmetry symbol.
+    display (bool): Flag to display the plot (default=True).
     """
     plt.figure()
-    plt.scatter(data[:, 0], data[:, 1], label='Data Points')
-    plt.plot(data[:, 0], fit_curve, color='red', label='Fit Curve')
-    plt.xlabel(xlabel)
-    plt.ylabel(ylabel)
-    plt.title(title)
+    plt.scatter(data[:,0], data[:,1], label='Data Points')
+    plt.plot(fit_curve[:,0], fit_curve[:,1], color='red', label='Fit Curve')
+    plt.xlabel('Volume')
+    plt.ylabel('Energy')
+    plt.title(f"{chemical_symbol} - {crystal_symmetry_symbol}")
     plt.legend()
-    if save_fig:
-        now = datetime.datetime.now()
-        plt.savefig(f"{title}_{now.strftime('%Y-%m-%d_%H-%M-%S')}.png")
-    else:
+    if display:
         plt.show()
-
+    else:
+        now = datetime.datetime.now()
+        plt.savefig(f"{chemical_symbol}_{crystal_symmetry_symbol}_{now.strftime('%Y-%m-%d_%H-%M-%S')}.png")
 def fit_an_equation_of_state(filename):
     """
-    Process the file and plot results related to equation of state fits.
-
-    Args:
-        filename (str): Path to the data file.
+    Processes the file containing volumes and energies, calculates statistics, quadratic coefficients, and fits an equation of state.
+    Then, it plots the data and the fit curve.
+    Parameters:
+    filename (str): Path to the file containing volumes and energies.
     """
-    chemical_symbol, crystal_symmetry_symbol, density_functional_acronym = parse_file_name(filename)
-    print(f"Processed file for: {chemical_symbol} in {crystal_symmetry_symbol} structure using {density_functional_acronym} approximation.")
+    data = read_two_columns_text(filename)
+    stats = calculate_bivariate_statistics(data)
+    quad_coeffs = calculate_quadratic_fit(data)
+    fit_curve = fit_eos(data, quad_coeffs)
+    chemical_symbol, crystal_symmetry_symbol, _ = parse_file_name(os.path.basename(filename))
 
-    try:
-        data = read_two_columns_text(filename)
-    except OSError as e:
-        print(e)
-        return
-
-    volumes = data[0]
-    energies = data[1]
-    statistics = calculate_bivariate_statistics(data)
-    print(f"Statistics:\nMean of Y: {statistics[0]}\nStandard Deviation of Y: {statistics[1]}\nMin X: {statistics[2]}, Max X: {statistics[3]}\nMin Y: {statistics[4]}, Max Y: {statistics[5]}")
-
-    quadratic_coefficients = calculate_quadratic_fit(data)
-    print(f"Quadratic Coefficients: {quadratic_coefficients}")
-
-    eos_fit_curve, eos_parameters = fit_eos(volumes, energies, quadratic_coefficients, eos='murnaghan', number_of_points=120)
-    print(f"EOS Fit Curve: {eos_fit_curve}")
-    print(f"EOS Parameters: {eos_parameters}")
-
-    plot_data_and_fit(data, eos_fit_curve, f"Murnaghan Equation of State for {chemical_symbol} in DFT {crystal_symmetry_symbol}",
-                      r'$V$ ($\mathit{\AA}^3$/atom)', r'$E$ (eV/atom)', display_graph=True)
-
+    plot_data_and_fit(data, fit_curve, stats, chemical_symbol, crystal_symmetry_symbol)
 def visualize_vectors_in_space():
     """
-    Generate spatial grid, calculate eigenvectors and eigenvalues, and plot the results.
+    Generates a spatial grid and matrix, calculates eigenvectors and eigenvalues, and plots the results.
     """
-    pass
-
+    matrix = generate_matrix()
+    eigenvectors, eigenvalues = calculate_lowest_eigenvectors(matrix)
+    # Plot eigenvectors and eigenvalues
 if __name__ == "__main__":
-    # Test cases
+    # Test visualize_vectors_in_space function
     visualize_vectors_in_space()
+    # Fit an equation of state using the provided data file
     fit_an_equation_of_state("final_exam/volumes_energies.dat")
