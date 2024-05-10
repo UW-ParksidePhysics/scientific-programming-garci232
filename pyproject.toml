@@ -10,6 +10,8 @@ packages = [{include = "repl_nix_scientific_programming_garci232"}]
 python = "^3.10"
 matplotlib = "^3.8.4"
 numpy = "^1.26.4"
+modules = "^1.0.0"
+scipy = "^1.13.0"
 
 
 [build-system]

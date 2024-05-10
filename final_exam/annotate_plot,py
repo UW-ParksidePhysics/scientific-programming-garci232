@@ -1,0 +1,29 @@
+import matplotlib.pyplot as plt
+import numpy as np
+__author__ = "Your Name"
+def annotate_plot(ax, annotations):
+    for label, annotation_props in annotations.items():
+        ax.text(annotation_props['x'], annotation_props['y'], label,
+                fontsize=annotation_props.get('fontsize', 12),
+                ha=annotation_props.get('ha', 'center'),
+                va=annotation_props.get('va', 'center'))
+if __name__ == "__main__":
+    # Example plotting function
+    def plot_sine_wave():
+        x = np.linspace(0, 2*np.pi, 100)
+        y = np.sin(x)
+        fig, ax = plt.subplots()
+        ax.plot(x, y, label='Sine Wave')
+        ax.set_xlabel('X')
+        ax.set_ylabel('Y')
+        ax.set_title('Annotated Sine Wave Plot')
+        annotations = {
+            'Author': {'x': 0.5, 'y': 0.5, 'fontsize': 14, 'ha': 'center', 'va': 'center'},
+            'Date': {'x': 0.8, 'y': 0.2, 'fontsize': 12, 'ha': 'center', 'va': 'center'}
+        }
+        annotate_plot(ax, annotations)
+        ax.set_ylim(-1.5, 1.5)
+        ax.legend()
+        ax.grid(True)
+        plt.show()
+    plot_sine_wave()
