@@ -1,5 +1,9 @@
-import numpy as np
+"""
+ this script runs standalone tests from various modules to verify their functionality. It provides a way to automate testing for multiple modules at once.
+"""
 __author__ = "Nicolas Garcia"
+
+import numpy as np
 def read_two_columns_text(filename):
     try:
         data = np.loadtxt(filename).T

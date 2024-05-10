@@ -1,6 +1,9 @@
-import numpy as np
+"""
+ this code provides a reusable module for fitting a quadratic polynomial to a set of x-y data and demonstrates its usage with an example dataset.
+"""
 __author__ = "Garcia, Nicolas"
 
+import numpy as np
 def calculate_quadratic_fit(data):
     """
     Fits a quadratic polynomial to provided x-y data and returns the coefficients,

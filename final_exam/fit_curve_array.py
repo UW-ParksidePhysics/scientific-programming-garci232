@@ -1,5 +1,9 @@
-import numpy as np
+"""
+ this module provides a way to generate x-y data points based on a quadratic equation over a specified range and number of points and demonstrates its usage with an example.
+"""
 __author__ = "Nicolas Garcia"
+
+import numpy as np
 def fit_curve_array(quadratic_coefficients, minimum_x, maximum_x, number_of_points=100):
     if maximum_x < minimum_x:
         raise ArithmeticError("Maximum x should be greater than minimum x")

@@ -1,7 +1,8 @@
 """
 Module for analyzing bivariate (x, y) data and calculating statistical properties.
-__author__ = "Garcia, Nicolas"
 """
+__author__ = "Nicolas Garcia"
+
 import numpy as np
 from scipy import stats
 def calculate_bivariate_statistics(data):

@@ -1,3 +1,8 @@
+"""
+ this module provides a way to calculate the eigenvectors with the smallest eigenvalues for a given square matrix, along with an example of its usage.
+"""
+__author__ = "Nicolas Garcia"
+
 import numpy as np
 __author__ = "Nicolas Garcia"
 def calculate_lowest_eigenvectors(square_matrix, number_of_eigenvectors=3):

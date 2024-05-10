@@ -1,3 +1,8 @@
+"""
+ this module provides a way to annotate plots with text using Matplotlib, allowing users to add custom annotations such as author information, dates, or any other relevant details to their plots.
+"""
+__author__ = "Nicolas Garcia"
+
 import matplotlib.pyplot as plt
 import numpy as np
 __author__ = "Nicolas Garcia"
