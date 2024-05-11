@@ -1,16 +1,15 @@
 import os
 import numpy as np
 import matplotlib.pyplot as plt
-from datetime import datetime
-from convert_units import convert_units
-from read_two_columns_text import read_two_columns_text
-from calculate_bivariate_statistics import calculate_bivariate_statistics
-from calculate_quadratic_fit import calculate_quadratic_fit
-from equations_of_state import fit_eos
-from annotate_plot import annotate_plot
-from generate_matrix import generate_matrix
-from calculate_lowest_eigenvectors import calculate_lowest_eigenvectors
-
+import datetime
+from final_exam import convert_units
+from final_exam import read_two_columns_text
+from final_exam import calculate_bivariate_statistics
+from final_exam import calculate_quadratic_fit
+from final_exam import fit_eos
+from final_exam import annotate_plot
+from final_exam import generate_matrix
+from final_exam import calculate_lowest_eigenvectors
 def parse_file_name(filename):
     """
     Extracts metadata from the filename.
@@ -21,7 +20,6 @@ def parse_file_name(filename):
     """
     parts = filename.split('.')
     return parts[0], parts[1], parts[2]
-
 def plot_data_and_fit(data, fit_curve, parameters, chemical_symbol, crystal_symmetry_symbol, display=True):
     """
     Plots data points, fit curve, and annotates the plot.
@@ -43,9 +41,8 @@ def plot_data_and_fit(data, fit_curve, parameters, chemical_symbol, crystal_symm
     if display:
         plt.show()
     else:
-        now = datetime.now()
+        now = datetime.datetime.now()
         plt.savefig(f"{chemical_symbol}_{crystal_symmetry_symbol}_{now.strftime('%Y-%m-%d_%H-%M-%S')}.png")
-
 def fit_an_equation_of_state(filename):
     """
     Processes the file containing volumes and energies, calculates statistics, quadratic coefficients, and fits an equation of state.
@@ -56,11 +53,10 @@ def fit_an_equation_of_state(filename):
     data = read_two_columns_text(filename)
     stats = calculate_bivariate_statistics(data)
     quad_coeffs = calculate_quadratic_fit(data)
-    fit_curve = fit_eos(data, quad_coeffs, number_of_points=120)  # Add number_of_points argument
+    fit_curve = fit_eos(data, quad_coeffs)
     chemical_symbol, crystal_symmetry_symbol, _ = parse_file_name(os.path.basename(filename))
 
     plot_data_and_fit(data, fit_curve, stats, chemical_symbol, crystal_symmetry_symbol)
-
 def visualize_vectors_in_space():
     """
     Generates a spatial grid and matrix, calculates eigenvectors and eigenvalues, and plots the results.
@@ -68,7 +64,6 @@ def visualize_vectors_in_space():
     matrix = generate_matrix()
     eigenvectors, eigenvalues = calculate_lowest_eigenvectors(matrix)
     # Plot eigenvectors and eigenvalues
-
 if __name__ == "__main__":
     # Test visualize_vectors_in_space function
     visualize_vectors_in_space()
