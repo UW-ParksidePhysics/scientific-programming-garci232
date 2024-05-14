@@ -1,5 +1,13 @@
 {
   "files": {
+    ".replit": [
+      {
+        "id": "fedfcf45-8d0a-42ca-bdc1-a648c1e26688",
+        "line": 2,
+        "version": 2,
+        "index": 23
+      }
+    ],
     "main.py": [
       {
         "id": "49a54520-da48-45ce-afb5-cc97075fc39e",

@@ -1,5 +1,6 @@
 {pkgs}: {
   deps = [
+    pkgs.vimPlugins.vim-elixir
     pkgs.xsimd
     pkgs.libxcrypt
     pkgs.gfortran
